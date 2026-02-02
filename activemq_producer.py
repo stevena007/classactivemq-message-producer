@@ -9,7 +9,7 @@ import sys
 # Check Python version before importing other modules
 if sys.version_info < (3, 6):
     sys.stderr.write("Error: This script requires Python 3.6 or higher.\n")
-    sys.stderr.write("You are using Python %d.%d.%d\n" % (sys.version_info.major, sys.version_info.minor, sys.version_info.micro))
+    sys.stderr.write("You are using Python %d.%d.%d\n" % (sys.version_info[0], sys.version_info[1], sys.version_info[2]))
     sys.stderr.write("Please run with 'python3' instead of 'python':\n")
     sys.stderr.write("  python3 activemq_producer.py [arguments]\n")
     sys.exit(1)
