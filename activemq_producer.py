@@ -4,11 +4,20 @@ ActiveMQ Message Producer
 A Python application to send messages to a classic ActiveMQ V5 queue.
 """
 
+import sys
+
+# Check Python version before importing other modules
+if sys.version_info < (3, 6):
+    sys.stderr.write("Error: This script requires Python 3.6 or higher.\n")
+    sys.stderr.write(f"You are using Python {sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}\n")
+    sys.stderr.write("Please run with 'python3' instead of 'python':\n")
+    sys.stderr.write("  python3 activemq_producer.py [arguments]\n")
+    sys.exit(1)
+
 import argparse
 import json
 import random
 import string
-import sys
 import time
 import xml.etree.ElementTree as ET
 from datetime import datetime

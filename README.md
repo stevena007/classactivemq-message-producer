@@ -31,17 +31,19 @@ pip install -r requirements.txt
 
 ## Usage
 
+**Note:** This script requires Python 3.6 or higher. Use `python3` command to run it.
+
 ### Basic Usage
 
 Send 10 JSON messages to a queue:
 ```bash
-python activemq_producer.py --queue myQueue
+python3 activemq_producer.py --queue myQueue
 ```
 
 ### Advanced Usage
 
 ```bash
-python activemq_producer.py \
+python3 activemq_producer.py \
   --host localhost \
   --port 61613 \
   --queue testQueue \
@@ -69,17 +71,17 @@ python activemq_producer.py \
 
 ### Send 50 XML messages at 10 messages/second
 ```bash
-python activemq_producer.py --queue xmlQueue --count 50 --rate 10 --format xml
+python3 activemq_producer.py --queue xmlQueue --count 50 --rate 10 --format xml
 ```
 
 ### Send large JSON messages (10KB each)
 ```bash
-python activemq_producer.py --queue largeQueue --count 20 --size 10240 --format json
+python3 activemq_producer.py --queue largeQueue --count 20 --size 10240 --format json
 ```
 
 ### Send to remote ActiveMQ with authentication
 ```bash
-python activemq_producer.py \
+python3 activemq_producer.py \
   --host activemq.example.com \
   --port 61613 \
   --username admin \
@@ -90,7 +92,7 @@ python activemq_producer.py \
 
 ### Send messages slowly (1 message every 2 seconds)
 ```bash
-python activemq_producer.py --queue slowQueue --count 10 --rate 0.5
+python3 activemq_producer.py --queue slowQueue --count 10 --rate 0.5
 ```
 
 ## Message Format
